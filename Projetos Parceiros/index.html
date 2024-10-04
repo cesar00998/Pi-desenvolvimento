@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros</title>
+    <style>
+        * {
+            margin: 2;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .text-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .text-section h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .text-section p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .text-section blockquote {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ffffff;
+            border-left: 5px solid #ccc;
+            font-style: italic;
+            color: #333;
+        }
+
+        .text-section strong {
+            color: #333;
+        }
+
+        .image-section {
+            flex-shrink: 0;
+            max-width: 400px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .photos {
+            position: relative;
+            width: 550px;
+            height: 550px;
+        }
+
+        .photo {
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            transition: transform 0.3s ease, z-index: 0.3s ease;
+        }
+
+        #photo1,
+        #photo2,
+        #photo4,
+        #photo5 {
+            width: 160px;
+            height: 160px;
+        }
+
+        #photo1 {
+            background-image: url('ft/renomear.jpg');
+            top: 40px;
+            left: 40px;
+        }
+
+        #photo2 {
+            background-image: url('ft/4009\ \(1\).jpg');
+            top: 40px;
+            right: 40px;
+        }
+
+        #photo5 {
+            background-image: url('ft/IMG_20240823_132458_167.jpg');
+            bottom: 40px;
+            right: 40px;
+        }
+
+        #photo3 {
+            background-image: url('ft/IMG_20240428_181649_419.jpg');
+            width: 200px;
+            height: 200px;
+            top: 170px;
+            left: 130px;
+        }
+
+        .photo:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .paragrafo {
+            text-align: top 20px;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fffefe;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-container h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .services-container p.description {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            text-align: center;
+        }
+
+        .service-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="ft/TechMinds - logo 4 - ideia.png" alt="Logo da Empresa" class="logo">
+
+    <!-- Primeira Seção: Texto à esquerda, imagem à direita -->
+    <div class="container">
+        <div class="text-section">
+            <h1>ATELIÊ DIGITAL</h1>
+            <p>
+                
+
+                Integração Educacional de projetos acadêmicos de alunos.
+                
+               Em resumo, o nosso projeto tende a criarmos uma plataforma web que permita com que gerarmos um eco-sistema local entre alunos possibilitandos interagir entre si e permitindos depositar seus projetos integradores como acervo, dando visibilidade para que outras pessoas possam ver e utilizar como ideias, inspirações e fontes de pesquisa.
+                
+               <a href=" https://a23.lukmiller.com
+               ">Ler mais</a>
+            </p>
+          
+            
+        </div>
+        <div class="image-section">
+            <img src="ft/atelieDigital.png" alt="Alcione Albanesi com crianças">
+        </div>
+    </div>
+
+    <!-- Segunda Seção: Imagem à esquerda, texto à direita -->
+    <div class="container">
+        <div class="image-section">
+            <img src="ft/766.png" alt="Alcione Albanesi com crianças">
+        </div>
+        <div class="text-section">
+            <h1>FARMA UP</h1>
+            <p>
+                O nosso projeto tende a criarmos um ecossistema que permita a disponibilização de ferramentas importantes e úteis para a turma em que integramos ao desenrolar deste projeto,
+                 dando a eles o suporte necessário 
+                e fazendo o possível para resolver as adversidades que os próprios alunos e docentes observaram ao decorrer do curso.
+            </p>
+        
+            <a href="">Ler mais </a>
+        </div>
+    </div>
+
+    <!-- Terceira Seção: Texto à esquerda, imagem à direita -->
+    <div class="container">
+        <div class="text-section">
+            <h1>ESTÉTICA É PRA TODOS</h1>
+            <p>
+                A estética vai além de padrões e modas passageiras. Ela é a expressão da nossa individualidade, uma forma de cuidado e autoestima.
+                 Independentemente de quem você é, do seu estilo ou das suas preferências, a estética está ao seu alcance para realçar aquilo que você tem de mais especial..
+            </p>
+           
+            <a href="">Ler mais</a>
+        </div>
+        <div class="image-section">
+            <img src="ft/É PARA TODOS.png" alt="Alcione Albanesi com crianças">
+        </div>
+    </div>
+</body>
+
+</html>

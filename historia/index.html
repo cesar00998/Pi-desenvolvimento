@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Completo</title>
+    <style>
+        * {
+            margin: 2;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px; /* Você pode mudar para "right: 20px;" se quiser a logo no canto direito */
+            width: 100px; /* Tamanho da logo */
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .text-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .text-section h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .text-section p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .text-section blockquote {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ffffff;
+            border-left: 5px solid #ccc;
+            font-style: italic;
+            color: #333;
+        }
+
+        .text-section strong {
+            color: #333;
+        }
+
+        .image-section {
+            flex-shrink: 0;
+            max-width: 400px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .title p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .title {
+            margin-right: 50px;
+        }
+
+        .title h1 {
+            font-size: 64px;
+            color: #333;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        .photos {
+            position: relative;
+            width: 550px;
+            height: 550px;
+        }
+
+        .photo {
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            transition: transform 0.3s ease, z-index: 0.3s ease;
+        }
+
+        /* Dimensões padrão para as fotos circulares menores */
+        #photo1,
+        #photo2,
+        #photo4,
+        #photo5 {
+            width: 160px;
+            height: 160px;
+        }
+
+        /* Ajustes de posicionamento para as fotos menores */
+        #photo1 {
+            background-image: url('ft/renomear.jpg');
+            top: 40px;
+            left: 40px;
+        }
+
+        #photo2 {
+            background-image: url('ft/4009\ \(1\).jpg');
+            top: 40px;
+            right: 40px;
+        }
+
+
+        #photo5 {
+            background-image: url('ft/IMG_20240823_132458_167.jpg');
+            bottom: 40px;
+            right: 40px;
+        }
+
+        /* Dimensões e posicionamento da foto central maior */
+        #photo3 {
+            background-image: url('ft/IMG_20240428_181649_419.jpg');
+            width: 200px;
+            height: 200px;
+            top: 170px;
+            left: 130px;
+        }
+
+        /* Efeito de hover */
+        .photo:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .paragrafo{
+            text-align: top 20px;
+        }
+
+
+    
+        .services-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fffefe;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-container h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .services-container p.description {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            text-align: center;
+        }
+
+        .service-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais pronunciada */
+}
+    </style>
+</head>
+
+<body>
+    <!-- Logo no canto superior esquerdo -->
+    <img src="ft/TechMinds - logo 4 - ideia.png" alt="Logo da Empresa" class="logo">
+    
+    <!-- Primeiro Layout: Texto à esquerda, imagem à direita -->
+    <div class="container">
+        <div class="text-section">
+            <h1> Tech Minds</h1>
+          <p>
+            A nossa empresa iniciou suas atividades em junho de 2023, motivada pela crescente demanda por projetos especializados em tecnologia e inovação. Com uma visão ousada e um compromisso com a excelência, os fundadores Cesar, Ian e Isabelle uniram suas competências e paixões para dar vida a uma organização focada em criar soluções tecnológicas sob medida. Desde o início, nosso objetivo tem sido oferecer plataformas e sites que não apenas atendam, mas superem as expectativas dos nossos clientes, auxiliando empresas e projetos em suas necessidades específicas. <br>
+            
+            A partir do nosso lançamento, rapidamente percebemos a importância de expandir nossa equipe para continuar a atender a complexidade e o volume dos projetos que nos eram confiados. Foi então que tivemos o prazer de incorporar Pablo à nossa equipe, um profissional talentoso que trouxe consigo uma nova perspectiva e uma rica experiência. A entrada de Pablo não só agregou valor ao nosso trabalho, mas também inspirou a adoção de um novo nome para a empresa, "Teach Minds", que simboliza nosso compromisso com o ensino, o aprendizado contínuo e a criação de soluções inteligentes e inovadoras.
+            </p>
+          
+        </div>
+        <div class="image-section">
+            <img src="ft/techsd.png" alt="Alcione Albanesi com crianças">
+        </div>
+    </div>
+
+    <h1>Colaboradores da tech minds</h1>
+    <!-- Segundo Layout: Fotos circulares -->
+    <div class="container">
+        <div class="title"></div>
+        <div class="photos">
+            <div class="photo" id="photo1"></div>
+            <div class="photo" id="photo2"></div>
+            <div class="photo" id="photo3"></div>
+            <div class="photo" id="photo4"></div>
+            <div class="photo" id="photo5"></div>
+        </div>
+        <div class="container">
+            <p class="pa">Unidos pela inovação, transformamos a web em um universo <br>
+            interconectado, onde cada site é uma estrela brilhando em nosso projeto.</p>
+        </div>
+    </div>
+
+    <div class="services-container">
+        <h1>Serviços de TI e Desenvolvimento</h1>
+        <p class="description">Nossa empresa oferece soluções personalizadas em tecnologia da informação e desenvolvimento de software para atender às necessidades específicas de cada cliente.</p>
+        <div class="services">
+            <div class="service-item">
+                <div class="service-icon">💻</div>
+                <h3>Desenvolvimento de Software</h3>
+                <p>Desenvolvemos aplicações personalizadas, desde sistemas web até aplicativos móveis, garantindo alta performance e segurança.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🔒</div>
+                <h3>Segurança da Informação</h3>
+                <p>Implementamos estratégias de segurança cibernética para proteger seus dados e manter sua infraestrutura segura contra ameaças.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">☁️</div>
+                <h3>Computação em Nuvem</h3>
+                <p>Oferecemos soluções de computação em nuvem para melhorar a escalabilidade e a eficiência dos seus negócios.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">⚙️</div>
+                <h3>Consultoria em TI</h3>
+                <p>Nossos especialistas oferecem consultoria para ajudar sua empresa a adotar as melhores práticas em tecnologia.</
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
